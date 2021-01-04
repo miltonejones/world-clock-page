@@ -1,0 +1,40 @@
+<div
+  class="page-body"
+  [style.background-image]="'url(' + this.photo + ')'"
+  [style.background-size]="backgroundSize"
+>
+
+<div app-search-box class="app-search-box">
+  search here
+</div>
+
+
+<div class="container">
+  <div class="scrolling-text" [@scroll]="state" (@scroll.done)="scrollDone()">
+    <label *ngFor="let art of articles; let i = index"
+    [class.bye]="i > 3  ">
+    <div class="head">
+      {{art.title}}
+    </div>
+    <div class="desc">
+      {{art.description}}
+    </div>
+    <img [src]="art.urlToImage">
+  </label>
+  </div>
+</div>
+
+  <app-digital-clock></app-digital-clock>
+
+  <div class="contract-logo">
+    <a href="https://www.pexels.com" target="_blank"
+      >Photos provided by Pexels</a
+    >
+    <div class="photo-credit">
+      Photographer:
+      <a [href]="selected.photographer_url" target="_blank"
+        >{{selected.photographer}}</a
+      >
+    </div>
+  </div>
+</div>

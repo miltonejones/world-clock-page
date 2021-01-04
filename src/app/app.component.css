@@ -1,0 +1,104 @@
+p {
+  font-family: Lato;
+}
+
+.page-body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-size: 100vw 100vh;
+  transition: all 1.5s;
+  padding: 0;
+}
+
+.contract-logo {
+  font-family: "Rubik", sans-serif;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  width: 250px;
+}
+
+.contract-logo a {
+  color: white;
+}
+
+.photo-credit {
+  font-size: 0.8rem;
+}
+
+.app-search-box {
+  position: absolute;
+  top: 10px;;
+  left: 10px;
+}
+
+.container {
+  height: 60px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 64px;
+  width: 100%;
+}
+
+.scrolling-text {
+  position: absolute;
+  bottom: 8px;
+  white-space: nowrap;
+  display: flex;
+  height: 48px;
+  /* outline: dotted 2px red; */
+}
+ 
+label {
+  margin: 0 10px;
+  max-width: 24vw;
+  width: 24vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* outline: dotted 1px rebeccapurple; */
+  display: block;
+  background-color: white;
+  opacity: .7;
+  padding: 0 8px;
+  height: 48px;
+  display: grid;
+  border-radius: 5px;
+  grid-template-columns: 72px 1fr;
+  grid-template-rows: 24px 24px;
+  grid-template-areas: "img head" "img desc";
+}
+
+label img {
+  grid-area: img;
+  height: 44px;
+  width: auto;
+  margin: 2px 0;
+  max-width: 64px;
+}
+
+label .head,
+label .desc{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 95%;
+  max-width: 280px;
+}
+
+label .head {
+  grid-area: head;
+  /* mix-blend-mode: exclusion; */
+}
+
+label .desc {
+  grid-area: desc;
+  font-size: .8rem;
+  /* mix-blend-mode: exclusion; */
+}
+
+label.bye {
+  display: none;
+}

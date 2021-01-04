@@ -1,0 +1,6 @@
+<img [src]="photoUrl" [@photoState]="position" />
+
+<button (click)="changePosition('move')">Move</button>
+<button (click)="changePosition('spin')">Rotate</button>
+<button (click)="changePosition('enlarge')">Scale</button>
+<button (click)="changePosition(null)">Reset</button>

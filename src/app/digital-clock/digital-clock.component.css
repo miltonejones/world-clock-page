@@ -1,0 +1,93 @@
+.clock {
+  display: flex;
+  gap: 2px;
+  font-family: "Rubik", sans-serif;
+  position: relative;
+  flex-grow: 1;
+  border: solid 1px #bbb;
+  width: 470px;
+  max-width: 510px;
+  border-radius: 10px;
+  padding: 0 20px 10px 40px;
+  background-color: #fff;
+  opacity: .8; 
+}
+
+.credit {
+  position: absolute;
+  bottom: 4px;
+  left: 20px;
+  font-size: .7rem;
+  color: #bbb;
+}
+ 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hh,
+.colon,
+.mm {
+  font-size: 10rem;
+}
+.am {
+  width: 120px;
+  text-align: right;
+  margin: 0 4px;
+  font-size: 4rem;
+  padding: 20px 0 0 0;
+}
+
+/* .clock * {
+  outline: dotted 1px red;
+} */
+
+.gray {
+  color: #ddd;
+}
+
+.ss,
+.s2 {
+  width: 470px;
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  /* outline: dotted 1px red; */
+}
+.s2 {
+  left: 1440px;
+}
+
+.sec {
+  width: 20px;
+  margin: 0 2px;
+  position: absolute;
+  opacity: 0.1;
+  outline: none;
+}
+
+.sec.active {
+  opacity: 1;
+  font-weight: 900;
+}
+
+.day {
+  position: absolute;
+  right: 36px;
+  top: 4px;
+  width: 60px;
+}
+
+.dt-day,
+.dt-date {
+  float: left;
+  margin: 0 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+}

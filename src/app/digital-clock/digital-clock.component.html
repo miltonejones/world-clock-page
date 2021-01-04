@@ -1,0 +1,24 @@
+<div class="container">
+	<div class="clock" [style.background-image]="'url(' + url + ')'">
+		<div class="day">
+			<div class="dt-day">{{datePoint.day}}</div>
+			<div class="dt-date">{{datePoint.date}}</div>
+		</div>
+		<div class="am">
+			<div [class.gray]="!am">AM</div>
+			<div [class.gray]="am">PM</div>
+		</div>
+		<div class="hh">{{timePoint.hh}}</div>
+		<div class="colon">:</div>
+		<div class="hh">{{timePoint.m}}</div>
+		<div class="ss" #left>
+			<div class="sec" [style.left.px]="sec.left" [style.transition]="sec.trans" [class.active]="sec.active"
+				*ngFor="let sec of dots">
+				{{sec.value}}
+			</div>
+		</div>
+		<div class="credit">
+			Angular web components designed by <a href="https://www.linkedin.com/in/milton-jones-46b7a211/" target="_blank">Milton Jones</a>
+		</div>
+	</div>
+</div>

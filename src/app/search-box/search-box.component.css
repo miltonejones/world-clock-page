@@ -1,0 +1,20 @@
+
+div {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px #444;
+    padding: 8px 20px;
+}
+
+div input {
+    border: none;
+    font-size: 1.3rem;
+    width: 200px;
+    transition: width .5s;
+}
+
+div input:focus {
+    width: 90vw;
+    border: none;
+    outline: none;
+}
