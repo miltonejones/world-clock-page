@@ -31,21 +31,21 @@ const run = (name) => {
 }
 
 
- const wait = (ms) => {
-     return new observable(o => {
-         console.log('waiting %sms', ms)
+const wait = (ms) => {
+    return new observable(o => {
+        console.log('waiting %sms', ms)
         let d = new Date().getTime();
         let t = d + ms;
         while (d < t) {
             d = new Date().getTime()
         }
         o.next();
-     })
- }
+    })
+}
 
 class observable {
     constructor(f) { this.f = f }
     subscribe(next) { this.f({ next }); }
 }
 
-run('berlin').subscribe(console.log)
+run('norway').subscribe(console.log)

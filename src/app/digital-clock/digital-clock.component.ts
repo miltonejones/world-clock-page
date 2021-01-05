@@ -61,13 +61,14 @@ export class DigitalClockComponent implements OnInit {
     return new Observable<TimePoint>(observer => {
       const run = () => {
         const d = new Date();
-        const hh = (d.getHours() % 12)
+        let hh = (d.getHours() % 12)
         const h = d.getHours().toString();
         let m = d.getMinutes().toString();
         const s = d.getSeconds().toString();
         if (parseInt(m, 10) < 10) {
           m = `0${m}`;
         }
+        if (hh < 1) { hh = 12 };
         observer.next({ h, m, s, hh });
         window.requestAnimationFrame(run);
       };

@@ -129,14 +129,17 @@ export class AppComponent {
     return str.replace(/h=(\d+)\&w=(\d+)/, `h=${body.h}&w=${body.w}`);
   }
 
-  next() {
+  next(): void {
     const body = {
       w: document.body.offsetWidth,
       h: document.body.offsetHeight
     }
     const selected = this.photos[this.index];
     if (selected) {
-      console.log(selected?.width/selected?.height, body.w/body.h);
+      const scaleDiff = (selected?.width/selected?.height) / (body.w/body.h);
+      if (scaleDiff < .6) {
+        return this.next();
+      }
       this.before(this.buildURL(selected?.src?.large2x), selected);
       this.index = ++this.index % this.photos.length;
       setTimeout(() => this.next(), 9999);
