@@ -26,11 +26,11 @@
 
   <app-digital-clock></app-digital-clock>
 
-  <div class="contract-logo">
+  <div class="contract-logo" [@rotate]="turn">
     <a href="https://www.pexels.com" target="_blank"
       >Photos provided by Pexels</a
     >
-    <div class="photo-credit">
+    <div class="photo-credit" [hidden]="!selected?.photographer">
       Photographer:
       <a [href]="selected.photographer_url" target="_blank"
         >{{selected.photographer}}</a
