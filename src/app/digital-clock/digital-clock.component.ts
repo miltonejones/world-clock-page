@@ -41,7 +41,7 @@ export class DigitalClockComponent implements OnInit {
     this.tick().subscribe(f => this.display(f));
     this.dots = [];
     let num = Math.max(new Date().getSeconds() - 3, 0);
-    for (let i = 0; i < 22; i++) {
+    for (let i = 0; i < 28; i++) {
       const n = num % 60;
       const ss = n < 10 ? `0${n}` : n.toString();
       this.dots.push(new Dot(this.pastLeft, ss, i * 24));
@@ -52,7 +52,7 @@ export class DigitalClockComponent implements OnInit {
       const value = ++this.maxLeft;
       const num = value % 60;
       p.trans = "left 0s";
-      p.left = 20 * 24;
+      p.left = 26 * 24;
       p.value = num < 10 ? `0${num}` : num.toString();
     });
     this.go();

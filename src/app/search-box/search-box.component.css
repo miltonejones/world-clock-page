@@ -14,7 +14,7 @@ div input {
 }
 
 div input:focus {
-    width: 90vw;
+    width: 95vw;
     border: none;
     outline: none;
 }

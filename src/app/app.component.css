@@ -18,6 +18,11 @@ p {
   right: 10px;
   color: white;
   width: 250px;
+  transition: bottom .2s;
+}
+
+.contract-logo.on {
+  transform: rotateY(360deg);
 }
 
 .contract-logo a {
@@ -101,4 +106,16 @@ label .desc {
 
 label.bye {
   display: none;
+}
+
+
+
+@keyframes album-rotate {
+  from {
+    transform: rotateY(0);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
 }

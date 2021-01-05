@@ -10,17 +10,17 @@
   border-radius: 10px;
   padding: 0 20px 10px 40px;
   background-color: #fff;
-  opacity: .8; 
+  opacity: 0.8;
 }
 
 .credit {
   position: absolute;
   bottom: 4px;
-  left: 20px;
-  font-size: .7rem;
+  right: 20px;
+  font-size: 0.7rem;
   color: #bbb;
 }
- 
+
 .container {
   display: flex;
   justify-content: center;
@@ -51,10 +51,10 @@
 
 .ss,
 .s2 {
-  width: 470px;
+  width: 100%;
   position: absolute;
   bottom: 10px;
-  left: 0px;
+  right: 0px;
   height: 30px;
   white-space: nowrap;
   overflow: hidden;
@@ -90,4 +90,11 @@
   margin: 0 2px;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    display: block;
+    padding: 10px 45%;
+  }
 }
